@@ -1,0 +1,247 @@
+/* ================================
+   SISTEMA DE DESIGN
+   Instituto Através da Esperança
+================================ */
+
+/* Variáveis de cores, tipografia e espaçamento */
+:root {
+    --cor-verde-principal: #4F772D;
+    --cor-verde-escuro: #31572C;
+
+    --cor-azul-principal: #2C7DA0;
+    --cor-azul-escuro: #014F86;
+
+    --cor-amarelo-principal: #F4C95D;
+    --cor-amarelo-claro: #FFF3C4;
+
+    --cor-fundo: #F8F5E9;
+    --cor-branco: #FFFFFF;
+
+    --cor-texto-principal: #243B2A;
+    --cor-texto-secundario: #52605A;
+
+    --cor-borda: #D6D6C8;
+
+    --tamanho-h1: 2.5rem;
+    --tamanho-h2: 2rem;
+    --tamanho-h3: 1.5rem;
+    --tamanho-texto: 1rem;
+    --tamanho-pequeno: 0.875rem;
+
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 12px;
+    --espaco-4: 16px;
+    --espaco-5: 24px;
+    --espaco-6: 32px;
+    --espaco-7: 48px;
+    --espaco-8: 64px;
+}
+
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+/* Container principal utilizando Grid */
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+header {
+    grid-column: 1 / -1;
+
+    background-color: var(--cor-azul-principal);
+    color: var(--cor-branco);
+
+    padding: var(--espaco-6);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-4);
+
+    text-align: center;
+}
+
+header h1 {
+    font-size: var(--tamanho-h1);
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ================================
+   NAVEGAÇÃO
+================================ */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-5);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--espaco-2) var(--espaco-4);
+    border-radius: 6px;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-azul-escuro);
+    transform: translateY(-2px);
+}
+
+nav a:focus {
+    outline: 3px solid var(--cor-amarelo-principal);
+    outline-offset: 2px;
+}
+
+/* ================================
+   CONTEÚDO PRINCIPAL
+================================ */
+
+main {
+    grid-column: 2 / 12;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: var(--espaco-8) 0;
+}
+
+section {
+    background-color: var(--cor-branco);
+    padding: var(--espaco-6);
+    border-radius: 12px;
+    margin-bottom: var(--espaco-6);
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: var(--cor-verde-escuro);
+    font-size: var(--tamanho-h2);
+    margin-bottom: var(--espaco-4);
+}
+
+h3 {
+    color: var(--cor-azul-escuro);
+    font-size: var(--tamanho-h3);
+}
+
+p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--espaco-4);
+}
+
+/* ================================
+   FLEXBOX - ÁREA DE INFORMAÇÕES
+================================ */
+
+.info-area {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-4);
+    flex-wrap: wrap;
+}
+
+/* ================================
+   BADGES
+================================ */
+
+.badges {
+    display: flex;
+    gap: var(--espaco-3);
+    flex-wrap: wrap;
+    margin: var(--espaco-4) 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+}
+
+.badge-ativo {
+    background-color: var(--cor-verde-principal);
+    color: var(--cor-branco);
+}
+
+.badge-voluntario {
+    background-color: var(--cor-azul-principal);
+    color: var(--cor-branco);
+}
+
+.badge-doacao {
+    background-color: var(--cor-amarelo-principal);
+    color: var(--cor-texto-principal);
+}
+
+/* ================================
+   ALERTA
+================================ */
+
+.alert {
+    background-color: var(--cor-amarelo-claro);
+    border-left: 5px solid var(--cor-amarelo-principal);
+
+    padding: var(--espaco-4);
+    margin: var(--espaco-5) 0;
+
+    border-radius: 6px;
+    color: var(--cor-texto-principal);
+}
+
+.alert strong {
+    color: var(--cor-verde-escuro);
+}
+
+/* ================================
+   TOAST
+================================ */
+
+.toast {
+    background-color: var(--cor-verde-escuro);
+    color: var(--cor-branco);
+
+    padding: var(--espaco-4);
+    border-radius: 8px;
+
+    max-width: 400px;
+    margin: var(--espaco-5) 0;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ======*

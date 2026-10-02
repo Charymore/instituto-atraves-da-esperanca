@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Através da Esperança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instituto Através da Esperança</h1>
+
+        <!-- Imagem posicionada entre o título h1 e o nav -->
+        <img src="Inst-at-da-esp-AIGEN.png" alt="Banner do Instituto Através da Esperança" width="500">
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+    <main>
+
+    <section>
+    <h2>Projetos e participação</h2>
+
+    <div class="badges">
+        <span class="badge badge-ativo">Projeto ativo</span>
+        <span class="badge badge-voluntario">Voluntariado</span>
+        <span class="badge badge-doacao">Doação</span>
+    </div>
+
+    <div class="alert">
+        <strong>Importante:</strong>
+        Novas oportunidades de voluntariado estão disponíveis.
+    </div>
+
+    <div class="toast">
+        Cadastro enviado com sucesso!
+    </div>
+
+    <button class="btn" type="button" onclick="document.getElementById('modal').showModal()">
+        Saiba mais
+    </button>
+
+    <dialog id="modal">
+        <h2>Como participar</h2>
+        <p>
+            Você pode participar como voluntário, apoiador ou contribuindo
+            com as ações sociais do Instituto.
+        </p>
+
+        <button class="btn" type="button" onclick="document.getElementById('modal').close()">
+            Fechar
+        </button>
+    </dialog>
+    </section>
+
+    </main>
+</body>
+</html>
